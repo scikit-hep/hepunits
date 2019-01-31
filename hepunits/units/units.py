@@ -40,7 +40,7 @@ This module also defines an extensive set of derived units.
 
 Typical use cases::
 
-    >>> # add two quantities with length units and get the result im meters
+    >>> # add two quantities with length units and get the result in meters
     >>> from hepunits import units as u
     >>> (1 * u.meter + 5 * u.cm) / u.meter
     1.05
