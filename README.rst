@@ -43,11 +43,11 @@ but augments it with handy definitions, changing the basic length and time units
 Installation
 ------------
 
-Install ``particle`` like any other Python package:
+Install ``hepunits`` like any other Python package:
 
 .. code-block:: bash
 
-    pip install particle
+    pip install hepunits
 
 or similar (use ``--user``, ``virtualenv``, etc. if you wish).
 
