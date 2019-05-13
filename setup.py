@@ -4,11 +4,15 @@
 from __future__ import absolute_import
 from __future__ import print_function
 
-import os.path
+import sys
+import os
 
 from setuptools import setup
 from setuptools import find_packages
 
+# Only add pytest-runner if the setup.py call needs it
+needs_pytest = {'pytest', 'test', 'ptr'}.intersection(sys.argv)
+pytest_runner = ['pytest-runner'] if needs_pytest else []
 
 def get_version():
     g = {}
@@ -28,7 +32,7 @@ setup(
     license = 'new BSD',
     packages = find_packages(),
     include_package_data = True,
-    setup_requires = ['pytest-runner'],
+    setup_requires = [] + pytest_runner,
     tests_require = ['pytest'],
     keywords = [
         'HEP', 'units', 'constants',
