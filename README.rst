@@ -5,11 +5,11 @@ hepunits: units and constants in the HEP system of units
   :alt: Build Status
   :target: https://dev.azure.com/scikit-hep/hepunits/_build/latest?definitionId=5?branchName=master
 
-.. image:: https://img.shields.io/azure-devops/coverage/scikit-hep/HepUnits/1.svg
+.. image:: https://img.shields.io/azure-devops/coverage/scikit-hep/HepUnits/5.svg
   :alt: Coverage
   :target: https://dev.azure.com/scikit-hep/HepUnits/_build/latest?definitionId=5?branchName=master
 
-.. image:: https://img.shields.io/azure-devops/tests/scikit-hep/HepUnits/1.svg
+.. image:: https://img.shields.io/azure-devops/tests/scikit-hep/HepUnits/5.svg
    :alt: Tests
    :target: https://dev.azure.com/scikit-hep/HepUnits/_build/latest?definitionId=5?branchName=master
 
