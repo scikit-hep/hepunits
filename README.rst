@@ -1,6 +1,19 @@
 hepunits: units and constants in the HEP system of units
 ========================================================
 
+.. image:: https://dev.azure.com/scikit-hep/HepUnits/_apis/build/status/scikit-hep.hepunits?branchName=master
+  :alt: Build Status
+  :target: https://dev.azure.com/scikit-hep/hepunits/_build/latest?definitionId=5?branchName=master
+
+.. image:: https://img.shields.io/azure-devops/coverage/scikit-hep/HepUnits/1.svg
+  :alt: Coverage
+  :target: https://dev.azure.com/scikit-hep/HepUnits/_build/latest?definitionId=5?branchName=master
+
+.. image:: https://img.shields.io/azure-devops/tests/scikit-hep/HepUnits/1.svg
+   :alt: Tests
+   :target: https://dev.azure.com/scikit-hep/HepUnits/_build/latest?definitionId=5?branchName=master
+
+
 ``hepunits`` collects the most commonly used units and constants in the
 HEP System of Units, as derived from the basic units originally defined by the `CLHEP`_ project,
 which are *not* the same as the SI system of units:

@@ -32,11 +32,11 @@ jobs:
     displayName: 'Use latest pip'
 
   - script: |
-      pip install pytest pytest-azurepipelines
-      pytest
+      python -m pip install pytest pytest-azurepipelines pytest-cov
+      python -m pytest tests/ --cov hepunits --cov-report html --napoleon-docstrings
     displayName: 'pytest'
 
-- job: 'Make wheels'
+- job: 'Wheels'
   variables:
     python.version: '3.7'
 
