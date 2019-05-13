@@ -16,7 +16,7 @@ pytest_runner = ['pytest-runner'] if needs_pytest else []
 
 def get_version():
     g = {}
-    exec(open(os.path.join("hepunits", "version.py")).read(), g)
+    exec(open(os.path.join("hepunits", "_version.py")).read(), g)
     return g["__version__"]
 
 setup(
