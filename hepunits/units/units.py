@@ -223,7 +223,7 @@ sr = steradian
 milliradian = milli * radian
 mrad = milliradian
 
-degree = (pi / 180.) * radian
+degree = (180. / pi) * radian
 
 deg = degree
 
