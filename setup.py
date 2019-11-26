@@ -32,7 +32,7 @@ setup(
     description = 'Units and constants in the HEP system of units',
     long_description = open('README.rst').read(),
     url = 'https://github.com/scikit-hep/hepunits',
-    license = 'new BSD',
+    license = 'BSD-3-Clause',
     packages = find_packages(),
     include_package_data = True,
     python_requires = PYTHON_REQUIRES,
