@@ -10,6 +10,9 @@ import os
 from setuptools import setup
 from setuptools import find_packages
 
+
+PYTHON_REQUIRES = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
 # Only add pytest-runner if the setup.py call needs it
 needs_pytest = {'pytest', 'test', 'ptr'}.intersection(sys.argv)
 pytest_runner = ['pytest-runner'] if needs_pytest else []
@@ -29,9 +32,10 @@ setup(
     description = 'Units and constants in the HEP system of units',
     long_description = open('README.rst').read(),
     url = 'https://github.com/scikit-hep/hepunits',
-    license = 'new BSD',
+    license = 'BSD-3-Clause',
     packages = find_packages(),
     include_package_data = True,
+    python_requires = PYTHON_REQUIRES,
     setup_requires = [] + pytest_runner,
     tests_require = ['pytest'],
     keywords = [
@@ -48,10 +52,10 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Development Status :: 5 - Production/Stable',
     ],
     platforms = "Any",

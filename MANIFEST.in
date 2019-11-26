@@ -1,0 +1,11 @@
+# Include the license file
+include LICENSE
+
+# Include the README
+include README.rst
+
+# Include the MANIFEST itself
+include MANIFEST.in
+
+# Include directory with test suite
+recursive-include tests *
