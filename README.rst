@@ -1,5 +1,9 @@
-hepunits: units and constants in the HEP system of units
-========================================================
+Scikit-HEP project ``hepunits`` package: units and constants in the HEP system of units
+=======================================================================================
+
+.. image:: https://img.shields.io/pypi/v/hepunits.svg
+  :alt: PyPI
+  :target: https://pypi.python.org/pypi/hepunits
 
 .. image:: https://dev.azure.com/scikit-hep/HepUnits/_apis/build/status/scikit-hep.hepunits?branchName=master
   :alt: Build Status
