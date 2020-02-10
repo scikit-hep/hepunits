@@ -8,7 +8,7 @@ from pytest import approx
 
 from math import log
 
-from hepunits.units import mega, micro, yotta, yocto, kibi, tebi
+from hepunits import mega, micro, yotta, yocto, kibi, tebi
 
 
 def test_prefixes_e6():

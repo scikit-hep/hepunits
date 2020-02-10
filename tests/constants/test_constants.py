@@ -6,8 +6,8 @@ Tests for the hepunits.constants.constants module.
 
 from pytest import approx
 
-from hepunits.units import eV, nanometer, s, THz
-from hepunits.constants import *
+from hepunits import eV, nanometer, s, THz
+from hepunits import *
 
 
 def test_constants():

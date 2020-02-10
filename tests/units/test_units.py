@@ -6,8 +6,8 @@ Tests for the hepunits.units.units module.
 
 from pytest import approx
 
-from hepunits.units import *
-from hepunits.constants import two_pi
+from hepunits import *
+from hepunits import two_pi
 
 
 def test_length():
