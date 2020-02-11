@@ -1,5 +1,9 @@
-Scikit-HEP project ``hepunits`` package: units and constants in the HEP system of units
-=======================================================================================
+``hepunits``: units and constants in the HEP system of units
+============================================================
+
+.. image:: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
+   :alt: Scikit-HEP project package
+   :target: https://scikit-hep.org
 
 .. image:: https://img.shields.io/pypi/v/hepunits.svg
   :alt: PyPI
@@ -66,11 +70,16 @@ Install ``hepunits`` like any other Python package:
 
     pip install hepunits
 
-or similar (use ``--user``, ``virtualenv``, etc. if you wish).
+or similar (use e.g. ``virtualenv`` if you wish).
 
 
 Getting started
 ---------------
+
+The package contains 2 modules - ``constants`` and ``units``,
+whose names are self-explanatory.
+It may be more readable to import quantities explicitly from each of the modules
+though everything is available from the top-level as ``from hepunits import ...``.
 
 The module ``hepunits.constants`` contains 2 sorts of constants:
 physical constants and commonly used constants.
