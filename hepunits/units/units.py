@@ -153,6 +153,9 @@ s = second
 ms = millisecond
 ps = picosecond
 fs = femtosecond
+# shortcut "as = attosecond" not possible since "as" is a reserved word ;-)
+zs = zeptosecond
+ys = yoctosecond
 
 minute = 60 * second
 hour = 60 * minute
@@ -167,13 +170,15 @@ hertz = 1. / second
 
 kilohertz = kilo * hertz
 megahertz = mega * hertz
+gigahertz = giga * hertz
+terahertz = tera * hertz
 
 Hz = hertz
 
-THz = tera * hertz
-GHz = giga * hertz
-MHz = mega * hertz
-kHz = kilo * hertz
+kHz = kilohertz
+MHz = megahertz
+GHz = gigahertz
+THz = terahertz
 
 # --------------------------------------------------------------------
 # Units of energy
