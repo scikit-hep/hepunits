@@ -145,14 +145,23 @@ millisecond = milli * second
 microsecond = micro * second
 picosecond = pico * second
 femtosecond = femto * second
+attosecond = atto * second
+zeptosecond = zepto * second
+yoctosecond = yocto * second
 
 s = second
 ms = millisecond
 ps = picosecond
+fs = femtosecond
 
 minute = 60 * second
 hour = 60 * minute
 day = 24 * hour
+year = 365.25 * day
+
+h = hour
+d = day
+y = year
 
 hertz = 1. / second
 
