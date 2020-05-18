@@ -14,7 +14,7 @@ from __future__ import absolute_import
 
 from math import pi
 
-from ..units import m, s, eplus, mole, joule
+from ..units.units import m, s, eplus, mole, joule
 
 # -----------------------------------------------------------------------------
 # Mathematical constants

@@ -63,7 +63,7 @@ from __future__ import absolute_import
 
 from math import pi
 
-from .prefixes import *
+from . import prefixes as _pre
 
 # --------------------------------------------------------------------
 # Units of length
@@ -76,7 +76,7 @@ mm = millimeter
 mm2 = millimeter2
 mm3 = millimeter3
 
-meter = kilo * millimeter
+meter = _pre.kilo * millimeter
 meter2 = meter * meter
 meter3 = meter * meter * meter
 
@@ -84,7 +84,7 @@ m = meter
 m2 = meter2
 m3 = meter3
 
-centimeter = centi * meter
+centimeter = _pre.centi * meter
 centimeter2 = centimeter * centimeter
 centimeter3 = centimeter * centimeter * centimeter
 
@@ -92,7 +92,7 @@ cm = centimeter
 cm2 = centimeter2
 cm3 = centimeter3
 
-kilometer = kilo * meter
+kilometer = _pre.kilo * meter
 kilometer2 = kilometer * kilometer
 kilometer3 = kilometer * kilometer * kilometer
 
@@ -100,12 +100,12 @@ km = kilometer
 km2 = kilometer2
 km3 = kilometer3
 
-micrometer = micro * meter
+micrometer = _pre.micro * meter
 micron = micrometer
-nanometer = nano * meter
+nanometer = _pre.nano * meter
 angstrom = 1e-10 * meter
 
-femtometer = femto * meter
+femtometer = _pre.femto * meter
 fermi = femtometer
 
 fm = femtometer
@@ -114,12 +114,12 @@ fm3 = femtometer * femtometer * femtometer
 
 barn = 1.e-28 * meter2
 
-millibarn = milli * barn
-microbarn = micro * barn
-nanobarn = nano * barn
-picobarn = pico * barn
-femtobarn = femto * barn
-attobarn = atto * barn
+millibarn = _pre.milli * barn
+microbarn = _pre.micro * barn
+nanobarn = _pre.nano * barn
+picobarn = _pre.pico * barn
+femtobarn = _pre.femto * barn
+attobarn = _pre.atto * barn
 
 mb = millibarn
 nb = nanobarn
@@ -140,14 +140,14 @@ nanosecond = 1.
 
 ns = nanosecond
 
-second = giga * nanosecond
-millisecond = milli * second
-microsecond = micro * second
-picosecond = pico * second
-femtosecond = femto * second
-attosecond = atto * second
-zeptosecond = zepto * second
-yoctosecond = yocto * second
+second = _pre.giga * nanosecond
+millisecond = _pre.milli * second
+microsecond = _pre.micro * second
+picosecond = _pre.pico * second
+femtosecond = _pre.femto * second
+attosecond = _pre.atto * second
+zeptosecond = _pre.zepto * second
+yoctosecond = _pre.yocto * second
 
 s = second
 ms = millisecond
@@ -168,10 +168,10 @@ y = year
 
 hertz = 1. / second
 
-kilohertz = kilo * hertz
-megahertz = mega * hertz
-gigahertz = giga * hertz
-terahertz = tera * hertz
+kilohertz = _pre.kilo * hertz
+megahertz = _pre.mega * hertz
+gigahertz = _pre.giga * hertz
+terahertz = _pre.tera * hertz
 
 Hz = hertz
 
@@ -185,13 +185,13 @@ THz = terahertz
 # --------------------------------------------------------------------
 megaelectronvolt = 1.
 
-electronvolt = micro * megaelectronvolt
+electronvolt = _pre.micro * megaelectronvolt
 
-exaelectronvolt = exa * electronvolt
-petaelectronvolt = peta * electronvolt
-teraelectronvolt = tera * electronvolt
-gigaelectronvolt = giga * electronvolt
-kiloelectronvolt = kilo * electronvolt
+exaelectronvolt = _pre.exa * electronvolt
+petaelectronvolt = _pre.peta * electronvolt
+teraelectronvolt = _pre.tera * electronvolt
+gigaelectronvolt = _pre.giga * electronvolt
+kiloelectronvolt = _pre.kilo * electronvolt
 
 EeV = exaelectronvolt
 PeV = petaelectronvolt
@@ -234,7 +234,7 @@ steradian = 1.  # solid angle
 rad = radian
 sr = steradian
 
-milliradian = milli * radian
+milliradian = _pre.milli * radian
 mrad = milliradian
 
 degree = (pi / 180.) * radian
@@ -256,9 +256,9 @@ coulomb = eplus / e_SI
 # -------------------------
 ampere = coulomb / second
 
-milliampere = milli * ampere
-microampere = micro * ampere
-nanoampere = nano * ampere
+milliampere = _pre.milli * ampere
+microampere = _pre.micro * ampere
+nanoampere = _pre.nano * ampere
 
 A = ampere
 
@@ -273,9 +273,9 @@ watt = joule / second
 
 W = watt
 
-kW = kilo * watt
-MW = mega * watt
-GW = giga * watt
+kW = _pre.kilo * watt
+MW = _pre.mega * watt
+GW = _pre.giga * watt
 
 # Force [E][L^-1]
 newton = joule / meter
@@ -293,8 +293,8 @@ atmosphere = 101325 * pascal
 
 # Mass [E][T^2][L^-2]
 kilogram = joule * second * second / (meter * meter)
-gram = milli * kilogram
-milligram = milli * gram
+gram = _pre.milli * kilogram
+milligram = _pre.milli * gram
 
 kg = kilogram
 g = gram
@@ -302,16 +302,16 @@ mg = milligram
 
 # Electric potential
 megavolt = megaelectronvolt / eplus
-volt = micro * megavolt
-kilovolt = kilo * volt
+volt = _pre.micro * megavolt
+kilovolt = _pre.kilo * volt
 
 # Electric capacitance
 farad = coulomb / volt
 
-millifarad = milli * farad
-microfarad = micro * farad
-nanofarad = nano * farad
-picofarad = pico * farad
+millifarad = _pre.milli * farad
+microfarad = _pre.micro * farad
+nanofarad = _pre.nano * farad
+picofarad = _pre.pico * farad
 
 # Electric resistance
 ohm = volt / ampere
@@ -321,7 +321,7 @@ tesla = volt * second / meter2
 
 gauss = 1.e-4 * tesla
 
-kilogauss = kilo * gauss
+kilogauss = _pre.kilo * gauss
 
 # Magnetic Flux
 weber = volt * second  # weber = 1000*megavolt*ns
