@@ -33,11 +33,11 @@ c_light = 299792458 * m / s
 c_light_sq = c_light * c_light
 
 # Electron charge
-eminus = - eplus  # electron charge
+eminus = -eplus  # electron charge
 e_sq = eplus * eplus
 
 # Avogadro constant (taken from CODATA)
-Avogadro = 6.022140857e+23 / mole
+Avogadro = 6.022140857e23 / mole
 
 # Planck constant (taken from CODATA)
 h_Planck = 6.626070040e-34 * joule * s

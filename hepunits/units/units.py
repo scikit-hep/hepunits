@@ -68,7 +68,7 @@ from . import prefixes as _pre
 # --------------------------------------------------------------------
 # Units of length
 # ---------------
-millimeter = 1.
+millimeter = 1.0
 millimeter2 = millimeter * millimeter
 millimeter3 = millimeter * millimeter * millimeter
 
@@ -112,7 +112,7 @@ fm = femtometer
 fm2 = femtometer * femtometer
 fm3 = femtometer * femtometer * femtometer
 
-barn = 1.e-28 * meter2
+barn = 1.0e-28 * meter2
 
 millibarn = _pre.milli * barn
 microbarn = _pre.micro * barn
@@ -127,16 +127,16 @@ pb = picobarn
 fb = femtobarn
 ab = attobarn
 
-invmb = 1. / millibarn
-invnb = 1. / nanobarn
-invpb = 1. / picobarn
-invfb = 1. / femtobarn
-invab = 1. / attobarn
+invmb = 1.0 / millibarn
+invnb = 1.0 / nanobarn
+invpb = 1.0 / picobarn
+invfb = 1.0 / femtobarn
+invab = 1.0 / attobarn
 
 # --------------------------------------------------------------------
 # Units of time
 # --------------------------------------------------------------------
-nanosecond = 1.
+nanosecond = 1.0
 
 ns = nanosecond
 
@@ -166,7 +166,7 @@ h = hour
 d = day
 y = year
 
-hertz = 1. / second
+hertz = 1.0 / second
 
 kilohertz = _pre.kilo * hertz
 megahertz = _pre.mega * hertz
@@ -183,7 +183,7 @@ THz = terahertz
 # --------------------------------------------------------------------
 # Units of energy
 # --------------------------------------------------------------------
-megaelectronvolt = 1.
+megaelectronvolt = 1.0
 
 electronvolt = _pre.micro * megaelectronvolt
 
@@ -204,32 +204,32 @@ eV = electronvolt
 # --------------------------------------------------------------------
 # Units of electric charge
 # --------------------------------------------------------------------
-eplus = 1.  # positron charge
+eplus = 1.0  # positron charge
 
 # --------------------------------------------------------------------
 # Units of temperature
 # --------------------------------------------------------------------
-kelvin = 1.
+kelvin = 1.0
 
 # --------------------------------------------------------------------
 # Units of amount of substance
 # --------------------------------------------------------------------
-mole = 1.
+mole = 1.0
 
 mol = mole
 
 # --------------------------------------------------------------------
 # Units of luminous intensity
 # --------------------------------------------------------------------
-candela = 1.
+candela = 1.0
 
 cd = candela
 
 # --------------------------------------------------------------------
 # Units of angles
 # --------------------------------------------------------------------
-radian = 1.  # plane angle
-steradian = 1.  # solid angle
+radian = 1.0  # plane angle
+steradian = 1.0  # solid angle
 
 rad = radian
 sr = steradian
@@ -237,7 +237,7 @@ sr = steradian
 milliradian = _pre.milli * radian
 mrad = milliradian
 
-degree = (pi / 180.) * radian
+degree = (pi / 180.0) * radian
 
 deg = degree
 
@@ -287,7 +287,7 @@ pascal = newton / meter2
 
 Pa = pascal
 
-bar = 1.e+5 * pascal
+bar = 1.0e5 * pascal
 
 atmosphere = 101325 * pascal
 
@@ -319,7 +319,7 @@ ohm = volt / ampere
 # Magnetic Field
 tesla = volt * second / meter2
 
-gauss = 1.e-4 * tesla
+gauss = 1.0e-4 * tesla
 
 kilogauss = _pre.kilo * gauss
 
@@ -344,11 +344,11 @@ lux = lumen / meter2
 # --------------------------------------------------------------------
 
 # Activity [T^-1]
-becquerel = 1. / second
+becquerel = 1.0 / second
 
 Bq = becquerel
 
-curie = 3.7e+10 * becquerel
+curie = 3.7e10 * becquerel
 
 Ci = curie
 

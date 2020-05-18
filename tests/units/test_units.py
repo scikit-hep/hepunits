@@ -36,7 +36,7 @@ def test_crosssection():
 
 
 def test_luminosity():
-    assert invpb / invfb == approx(1.e-3)
+    assert invpb / invfb == approx(1.0e-3)
 
 
 def test_volume():
@@ -71,7 +71,7 @@ def test_energy():
 
 
 def test_angle():
-    assert 360. * degree == two_pi * radian
+    assert 360.0 * degree == two_pi * radian
 
 
 def test_magnetic_field():
