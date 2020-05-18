@@ -34,7 +34,12 @@ jobs:
     displayName: 'Use latest pip'
 
   - script: |
-      python -m pip install pytest pytest-azurepipelines pytest-cov
+      python -m pip install pytest pytest-azurepipelines pytest-cov 
+    displayName: 'Install some dependencies'
+  - script: |
+      python -m pip install .
+    displayName: 'Install package'
+  - script: |
       python -m pytest tests/ --cov hepunits --cov-report html --napoleon-docstrings
     displayName: 'pytest'
 
@@ -49,14 +54,16 @@ jobs:
     displayName: 'Use Python $(python.version)'
 
   - script: |
-      python -m pip install --upgrade pip
-      python -m pip install --upgrade wheel setuptools
+      python -m pip install --upgrade pip && \
+      python -m pip install --upgrade wheel setuptools setuptools_scm
     displayName: 'Install setuptools'
 
   - script: |
       python setup.py sdist
-      python setup.py bdist_wheel
-    displayName: Make artifacts
+    displayName: Make SDist
+  - script: |
+      python -m pip wheel .
+    displayName: Make wheel
 
   - task: PublishPipelineArtifact@0
     inputs:
