@@ -1,0 +1,37 @@
+# Python package
+# Create and test a Python package on multiple Python versions.
+
+trigger:
+- master
+
+jobs:
+- job: 'Tests'
+  pool:
+    vmImage: 'ubuntu-latest'
+  strategy:
+    matrix:
+      Python27:
+        python.version: '2.7'
+      Python38:
+        python.version: '3.8'
+
+  steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '$(python.version)'
+    displayName: 'Use Python $(python.version)'
+
+  - script: |
+      python -m pip install --upgrade pip
+    displayName: 'Use latest pip'
+
+  - script: |
+      python -m pip install pytest pytest-azurepipelines pytest-cov 
+    displayName: 'Install some dependencies'
+  - script: |
+      python -m pip install .
+    displayName: 'Install package'
+  - script: |
+      python -m pytest tests/ --cov hepunits --cov-report html --napoleon-docstrings
+    displayName: 'pytest'
+

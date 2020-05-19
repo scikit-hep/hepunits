@@ -21,6 +21,10 @@
    :alt: Tests
    :target: https://dev.azure.com/scikit-hep/HepUnits/_build/latest?definitionId=5?branchName=master
 
+.. image:: https://dev.azure.com/scikit-hep/particle/_apis/build/status/scikit-hep.particle?branchName=master
+  :alt: Build Status
+  :target: https://dev.azure.com/scikit-hep/particle/_build/latest?definitionId=1?branchName=master
+
 
 ``hepunits`` collects the most commonly used units and constants in the
 HEP System of Units, as derived from the basic units originally defined by the `CLHEP`_ project,
