@@ -8,4 +8,7 @@ include README.rst
 include MANIFEST.in
 
 # Include directory with test suite
-recursive-include tests *
+recursive-include tests *.py
+
+# Type support
+include py.typed

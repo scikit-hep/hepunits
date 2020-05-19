@@ -12,11 +12,11 @@ from hepunits import mega, micro, yotta, yocto, kibi, tebi
 
 
 def test_prefixes_e6():
-    assert 4 * mega == 1. / 0.25 / micro
+    assert 4 * mega == 1.0 / 0.25 / micro
 
 
 def test_prefixes_e24():
-    assert yotta * yocto == approx(1.)
+    assert yotta * yocto == approx(1.0)
 
 
 def test_prefixes_binary():

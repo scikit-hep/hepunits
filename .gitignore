@@ -68,3 +68,6 @@ docs/_build
 .pytest_cache
 /docs/html
 *.gv*
+/.mypy_cache/*
+/pip-wheel-metadata/*
+/src/hepunits/version.py
