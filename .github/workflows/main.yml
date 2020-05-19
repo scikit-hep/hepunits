@@ -1,0 +1,83 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: master
+    tags:
+    - 'v*'
+
+
+jobs:
+  pre-commit:
+    name: Format
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+    - name: set PY
+      run: echo "::set-env name=PY::$(python -c 'import hashlib, sys;print(hashlib.sha256(sys.version.encode()+sys.executable.encode()).hexdigest())')"
+    - uses: actions/cache@v1
+      with:
+        path: ~/.cache/pre-commit
+        key: pre-commit|${{ env.PY }}|${{ hashFiles('.pre-commit-config.yaml') }}
+    - uses: pre-commit/action@v1.1.0
+
+  checks:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version:
+        - 2.7
+        - 3.5
+        - 3.6
+        - 3.8
+    name: Check Python ${{ matrix.python-version }}
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install package
+      run: python -m pip install -e .[test]
+
+    - name: Test package
+      run: python -m pytest --cov hepunits
+
+  dist:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+
+    - name: Install wheel and sdist requirements
+      run: python -m pip install "setuptools>=42.0" "setuptools_scm[toml]>=3.4" "wheel"
+
+    - name: Build sdist
+      run: python setup.py sdist
+
+    - name: Build wheel
+      run: >
+        python -m pip wheel . -w wheels &&
+        ls -lh wheels &&
+        mkdir -p dist &&
+        cp wheels/hepunits*any.whl dist/
+
+    - uses: actions/upload-artifact@v1
+      with:
+        name: DistPackage
+        path: dist
+
+    - uses: pypa/gh-action-pypi-publish@master
+      with:
+        user: __token__
+        password: ${{ secrets.pypi_password }}
+      if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
