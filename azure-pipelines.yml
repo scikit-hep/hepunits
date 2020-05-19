@@ -26,7 +26,7 @@ jobs:
     displayName: 'Use latest pip'
 
   - script: |
-      python -m pip install pytest pytest-azurepipelines pytest-cov 
+      python -m pip install pytest pytest-azurepipelines pytest-cov
     displayName: 'Install some dependencies'
   - script: |
       python -m pip install .
