@@ -9,21 +9,15 @@
   :alt: PyPI
   :target: https://pypi.python.org/pypi/hepunits
 
-.. image:: https://dev.azure.com/scikit-hep/HepUnits/_apis/build/status/scikit-hep.hepunits?branchName=master
+.. image:: https://github.com/scikit-hep/hepunits/workflows/CI/badge.svg
   :alt: Build Status
-  :target: https://dev.azure.com/scikit-hep/hepunits/_build/latest?definitionId=5?branchName=master
+  :target: https://github.com/scikit-hep/hepunits/workflows/CI
 
 .. image:: https://img.shields.io/azure-devops/coverage/scikit-hep/HepUnits/5.svg
   :alt: Coverage
   :target: https://dev.azure.com/scikit-hep/HepUnits/_build/latest?definitionId=5?branchName=master
 
-.. image:: https://img.shields.io/azure-devops/tests/scikit-hep/HepUnits/5.svg
-   :alt: Tests
-   :target: https://dev.azure.com/scikit-hep/HepUnits/_build/latest?definitionId=5?branchName=master
 
-.. image:: https://dev.azure.com/scikit-hep/particle/_apis/build/status/scikit-hep.particle?branchName=master
-  :alt: Build Status
-  :target: https://dev.azure.com/scikit-hep/particle/_build/latest?definitionId=1?branchName=master
 
 
 ``hepunits`` collects the most commonly used units and constants in the
