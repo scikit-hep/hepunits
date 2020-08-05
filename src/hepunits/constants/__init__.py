@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Licensed under a 3-clause BSD style license, see LICENSE.
 """
 This module `hepunits.constants` contains 2 sorts of constants:

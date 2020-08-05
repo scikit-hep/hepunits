@@ -34,4 +34,3 @@ jobs:
   - script: |
       python -m pytest tests/ --cov hepunits --cov-report html --napoleon-docstrings
     displayName: 'pytest'
-

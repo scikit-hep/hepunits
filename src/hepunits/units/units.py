@@ -1,10 +1,13 @@
+# -*- coding: utf-8 -*-
 # Licensed under a 3-clause BSD style license, see LICENSE.
+
 """
 *************************
 Module of HEP basic units
 *************************
 
-In HEP the System of Units consists of the basic units originally defined by the [CLHEP]_ project:
+In HEP the System of Units consists of the basic units originally defined by
+the [CLHEP]_ project:
 
     ===================   ================== ====
     Quantity              Name               Unit
@@ -34,7 +37,8 @@ It is largely based on the international system of units ([SI]_)
     Luminous intensity    candela    cd
     ===================   ========   ====
 
-but augments it with handy definitions, changing the basic length and time units.
+but augments it with handy definitions, changing the basic length and time
+units.
 
 This module also defines an extensive set of derived units.
 
