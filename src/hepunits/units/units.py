@@ -126,12 +126,14 @@ femtobarn = _pre.femto * barn
 attobarn = _pre.atto * barn
 
 mb = millibarn
+ub = microbarn
 nb = nanobarn
 pb = picobarn
 fb = femtobarn
 ab = attobarn
 
 invmb = 1.0 / millibarn
+invub = 1.0 / microbarn
 invnb = 1.0 / nanobarn
 invpb = 1.0 / picobarn
 invfb = 1.0 / femtobarn
@@ -155,6 +157,7 @@ yoctosecond = _pre.yocto * second
 
 s = second
 ms = millisecond
+us = microsecond
 ps = picosecond
 fs = femtosecond
 # shortcut "as = attosecond" not possible since "as" is a reserved word ;-)
@@ -250,7 +253,8 @@ deg = degree
 # --------------------------------------------------------------------
 
 # Positron charge [Coulomb]
-e_SI = 1.6021766208e-19  # taken from CODATA
+e_SI = 1.602176634e-19  # exact value, taken from PDG 2020
+
 
 # Electric charge [Q]
 # --------------------------------------------------------------------
@@ -268,7 +272,7 @@ A = ampere
 
 # Energy [E]
 # ----------
-joule = electronvolt / e_SI  # joule = 6.24150 e+12 * MeV
+joule = electronvolt / e_SI  # joule = 6.24151e+12 * MeV
 
 J = joule
 
@@ -350,16 +354,42 @@ lux = lumen / meter2
 # Activity [T^-1]
 becquerel = 1.0 / second
 
+kilobecquerel = _pre.kilo * becquerel
+megabecquerel = _pre.mega * becquerel
+gigabecquerel = _pre.giga * becquerel
+
 Bq = becquerel
+
+kBq = kilobecquerel
+MBq = megabecquerel
+GBq = gigabecquerel
 
 curie = 3.7e10 * becquerel
 
+millicurie = _pre.milli * curie
+microcurie = _pre.micro * curie
+nanocurie = _pre.nano * curie
+
 Ci = curie
+
+mCi = millicurie
+uCi = microcurie
+nCi = nanocurie
 
 # Absorbed dose [L^2][T^-2]
 gray = joule / kilogram
 
+megagray = _pre.mega * gray
+kilogray = _pre.kilo * gray
+milligray = _pre.milli * gray
+microgray = _pre.micro * gray
+
 Gy = gray
+
+MGy = megagray
+kGy = kilogray
+mGy = milligray
+uGy = microgray
 
 # Dose equivalent
 sievert = joule / kilogram

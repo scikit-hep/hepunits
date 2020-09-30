@@ -13,7 +13,7 @@ from hepunits import *
 
 def test_constants():
     assert pi_sq == two_pi * half_pi
-    assert Avogadro == 6.022140857e23
+    assert Avogadro == 6.02214076e23
     assert c_light / (m / s) == 299792458
     assert hbarc_sq / c_light_sq == approx((h_Planck / two_pi) ** 2)
     assert hbar / (eV * s) == hbar / 1.0e3

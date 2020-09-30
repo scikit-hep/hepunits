@@ -55,6 +55,9 @@ It is largely based on the international system of units (`SI`_)
 
 but augments it with handy definitions, changing the basic length and time units.
 
+Note that many units are now *exact*, such as the speed of light in vacuum.
+The package is in agreement with the values in the 2020 Particle Data Group review.
+
 .. _CLHEP: http://proj-clhep.web.cern.ch/proj-clhep/
 .. _SI: http://www.physics.nist.gov/cuu/Units/index.html
 
