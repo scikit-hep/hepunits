@@ -6,17 +6,20 @@
    :target: https://scikit-hep.org
 
 .. image:: https://img.shields.io/pypi/v/hepunits.svg
-  :alt: PyPI
-  :target: https://pypi.python.org/pypi/hepunits
+   :alt: PyPI
+   :target: https://pypi.python.org/pypi/hepunits
 
 .. image:: https://github.com/scikit-hep/hepunits/workflows/CI/badge.svg
-  :alt: Build Status
-  :target: https://github.com/scikit-hep/hepunits/workflows/CI
+   :alt: Build Status
+   :target: https://github.com/scikit-hep/hepunits/workflows/CI
+
+.. image:: https://img.shields.io/conda/vn/conda-forge/hepunits.svg
+   :alt: conda-forge
+   :target: https://anaconda.org/conda-forge/hepunits
 
 .. image:: https://img.shields.io/azure-devops/coverage/scikit-hep/HepUnits/5.svg
-  :alt: Coverage
-  :target: https://dev.azure.com/scikit-hep/HepUnits/_build/latest?definitionId=5?branchName=master
-
+   :alt: Coverage
+   :target: https://dev.azure.com/scikit-hep/HepUnits/_build/latest?definitionId=5?branchName=master
 
 
 
