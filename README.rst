@@ -9,13 +9,13 @@
    :alt: PyPI
    :target: https://pypi.python.org/pypi/hepunits
 
-.. image:: https://github.com/scikit-hep/hepunits/workflows/CI/badge.svg
-   :alt: Build Status
-   :target: https://github.com/scikit-hep/hepunits/workflows/CI
-
 .. image:: https://img.shields.io/conda/vn/conda-forge/hepunits.svg
    :alt: conda-forge
    :target: https://anaconda.org/conda-forge/hepunits
+
+.. image:: https://github.com/scikit-hep/hepunits/workflows/CI/badge.svg
+   :alt: Build Status
+   :target: https://github.com/scikit-hep/hepunits/workflows/CI
 
 .. image:: https://img.shields.io/azure-devops/coverage/scikit-hep/HepUnits/5.svg
    :alt: Coverage
