@@ -21,7 +21,7 @@ repos:
   - id: check-yaml
 
 - repo: https://github.com/mgedmin/check-manifest
-  rev: "0.45"
+  rev: "0.46"
   hooks:
   - id: check-manifest
     additional_dependencies: [setuptools_scm, toml]
