@@ -50,4 +50,5 @@ hbarc = hbar_Planck * c_light
 
 hbarc_sq = hbarc * hbarc
 
+# Boltzmann constant (exact value, taken from PDG 2020)
 k_Boltzmann = 1.380649e-23 * joule / kelvin
