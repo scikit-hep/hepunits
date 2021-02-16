@@ -15,7 +15,7 @@ from __future__ import absolute_import
 
 from math import pi
 
-from ..units.units import m, s, eplus, mole, joule
+from ..units.units import m, s, eplus, mole, joule, kelvin
 
 # -----------------------------------------------------------------------------
 # Mathematical constants
@@ -49,3 +49,6 @@ hbar = hbar_Planck
 hbarc = hbar_Planck * c_light
 
 hbarc_sq = hbarc * hbarc
+
+# Boltzmann constant (exact value, taken from PDG 2020)
+k_Boltzmann = 1.380649e-23 * joule / kelvin

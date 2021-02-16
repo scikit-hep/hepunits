@@ -194,12 +194,14 @@ megaelectronvolt = 1.0
 
 electronvolt = _pre.micro * megaelectronvolt
 
+zettaelectronvolt = _pre.zetta * electronvolt
 exaelectronvolt = _pre.exa * electronvolt
 petaelectronvolt = _pre.peta * electronvolt
 teraelectronvolt = _pre.tera * electronvolt
 gigaelectronvolt = _pre.giga * electronvolt
 kiloelectronvolt = _pre.kilo * electronvolt
 
+ZeV = zettaelectronvolt
 EeV = exaelectronvolt
 PeV = petaelectronvolt
 TeV = teraelectronvolt
@@ -276,6 +278,8 @@ joule = electronvolt / e_SI  # joule = 6.24151e+12 * MeV
 
 J = joule
 
+erg = 1.0e-7 * joule
+
 # Power [M][L^2][T^-3]
 watt = joule / second
 
@@ -289,6 +293,8 @@ GW = _pre.giga * watt
 newton = joule / meter
 
 N = newton
+
+dyne = 1.0e-5 * newton
 
 # Pressure
 pascal = newton / meter2
