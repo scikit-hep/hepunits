@@ -21,7 +21,7 @@
    :alt: Code style: black
    :target: https://github.com/psf/black
 
- 
+
 ``hepunits`` collects the most commonly used units and constants in the
 HEP System of Units, as derived from the basic units originally defined by the `CLHEP`_ project,
 which are *not* the same as the SI system of units:
