@@ -14,13 +14,12 @@
    :target: https://anaconda.org/conda-forge/hepunits
 
 .. image:: https://github.com/scikit-hep/hepunits/workflows/CI/badge.svg
-   :alt: Build Status
-   :target: https://github.com/scikit-hep/hepunits/workflows/CI
+   :alt: Actions Status
+   :target: https://github.com/scikit-hep/hepunits/actions
 
-.. image:: https://img.shields.io/azure-devops/coverage/scikit-hep/HepUnits/5.svg
-   :alt: Coverage
-   :target: https://dev.azure.com/scikit-hep/HepUnits/_build/latest?definitionId=5?branchName=master
-
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :alt: Code style: black
+   :target: https://github.com/psf/black
 
 
 ``hepunits`` collects the most commonly used units and constants in the
@@ -58,6 +57,8 @@ It is largely based on the international system of units (`SI`_)
 
 but augments it with handy definitions, changing the basic length and time units.
 
+This HEP system of units is in use in many software libraries such as GEANT4 and Gaudi.
+
 Note that many units are now *exact*, such as the speed of light in vacuum.
 The package is in agreement with the values in the 2020 Particle Data Group review.
 
@@ -68,19 +69,25 @@ The package is in agreement with the values in the 2020 Particle Data Group revi
 Installation
 ------------
 
-Install ``hepunits`` like any other Python package:
+Install ``hepunits`` like any other Python package, typically:
 
 .. code-block:: bash
 
-    pip install hepunits
+    python -m pip install hepunits
 
-or similar (use e.g. ``virtualenv`` if you wish).
+The package is also available on `conda-forge`_, and installable with
+
+.. code-block:: bash
+
+    conda install -c conda-forge hepunits
+
+.. _conda-forge: https://github.com/conda-forge/hepunits-feedstock
 
 
 Getting started
 ---------------
 
-The package contains 2 modules - ``constants`` and ``units``,
+The package contains 2 modules, ``constants`` and ``units``,
 whose names are self-explanatory.
 It may be more readable to import quantities explicitly from each of the modules
 though everything is available from the top-level as ``from hepunits import ...``.
@@ -113,13 +120,33 @@ Typical usage of the ``hepunits.units`` module:
     >>> 1 * u.meter + 5 * u.cm
     1050.0
 
+Fancier usage
+~~~~~~~~~~~~~
+
+When working with data the user should not need to know what units are used in their
+internal representation (it makes sense, and *is important*, to be consistent throughout the "data storages").
+These simple rules are enough - exemplified in the code below:
+
+- Dimensioned quantities in the "data stores" abide to the HEP system of units.
+
+- All definitions of dimensioned quantities are dimensioned by multiplying by the units,
+  as in `mass_window = 500 * keV`.
+
+- All output of dimensioned quantities is converted to the required units
+  by dividing by the units, as in `energy_resolution() / GeV`.
+
+For the sake of argument, let's consider below a function returning a dimensioned quantity.
+the function below stores a dimensioned quantity defined in keV
+(the actual value is represented in MeV, which is the standard unit) and the caller simply needs
+to ensure an explicit conversion to the desired unit dividing by it (GeV in the example):
+
 .. code-block:: python
 
-    >>> from hepunits.units import MeV, GeV
-    >>> massWindow = 100 * MeV    # define a 100 MeV mass window
+    >>> from hepunits.units import keV, MeV, GeV
+    >>> mass_window = 1 * GeV    # define a 1 GeV mass window
     >>> def energy_resolution():
-    ...    # returns the energy resolution of 100 MeV
-    ...    return 100 * MeV
+    ...    # returns the energy resolution of 100 keV
+    ...    return 500. * keV
     ...
     >>> energy_resolution() / GeV # get the energy resolution in GeV
-    0.1
+    0.0005
