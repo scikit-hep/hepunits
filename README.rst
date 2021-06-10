@@ -124,7 +124,8 @@ Fancier usage
 ~~~~~~~~~~~~~
 
 When working with data the user should not need to know what units are used in their
-internal representation (it makes sense, and *is important*, to be consistent throughout the "data storages").
+internal representation (it makes sense, though, and *is important*, to be consistent throughout the "data storages"!).
+
 These simple rules are enough - exemplified in the code below:
 
 - Dimensioned quantities in the "data stores" abide to the HEP system of units.
@@ -145,8 +146,8 @@ to ensure an explicit conversion to the desired unit dividing by it (GeV in the 
     >>> from hepunits.units import keV, MeV, GeV
     >>> mass_window = 1 * GeV    # define a 1 GeV mass window
     >>> def energy_resolution():
-    ...    # returns the energy resolution of 100 keV
-    ...    return 500. * keV
+    ...    # returns the energy resolution of 500 keV
+    ...    return 500. * keV  # numerical value is 0.5
     ...
     >>> energy_resolution() / GeV # get the energy resolution in GeV
     0.0005
