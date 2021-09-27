@@ -1,7 +1,7 @@
 
 repos:
 - repo: https://github.com/psf/black
-  rev: 21.8b0
+  rev: 21.9b0
   hooks:
   - id: black
 
@@ -21,7 +21,7 @@ repos:
   - id: check-yaml
 
 - repo: https://github.com/mgedmin/check-manifest
-  rev: "0.46"
+  rev: "0.47"
   hooks:
   - id: check-manifest
     additional_dependencies: [setuptools_scm, toml]
