@@ -10,6 +10,5 @@ from setuptools import setup
 # > required to make one
 
 import setuptools_scm  # noqa: F401
-import toml  # noqa: F401
 
 setup()
