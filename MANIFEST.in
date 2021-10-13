@@ -1,14 +1,10 @@
-# Include the license file
-include LICENSE
-
-# Include the README
-include README.rst
-
-# Include the MANIFEST itself
-include MANIFEST.in
+include LICENSE README.rst MANIFEST.in
+include pyproject.toml
 
 # Include directory with test suite
 recursive-include tests *.py
 
 # Type support
 recursive-include src py.typed
+
+exclude .pre-commit-config.yaml codecov.yml
