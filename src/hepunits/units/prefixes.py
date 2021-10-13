@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 # Licensed under a 3-clause BSD style license, see LICENSE.
 """
-********************
 Common unit prefixes
-********************
+====================
 
 There are 2 types of prefixes:
 

@@ -2,9 +2,15 @@
 # Licensed under a 3-clause BSD style license, see LICENSE.
 
 """
-*************************
-Module of HEP basic units
-*************************
+Units in the HEP system of units
+================================
+
+This module `hepunits.units` contains 2 submodules for:
+
+  * Basic physical units and derived units (`hepunits.units.units`).
+  * Commonly-used unit prefixes (`hepunits.units.prefixes`).
+
+All units are provided in the HEP System of Units as defined below.
 
 In HEP the System of Units consists of the basic units originally defined by
 the [CLHEP]_ project:
@@ -39,8 +45,6 @@ It is largely based on the international system of units ([SI]_)
 
 but augments it with handy definitions, changing the basic length and time
 units.
-
-This module also defines an extensive set of derived units.
 
 Typical use cases::
 
