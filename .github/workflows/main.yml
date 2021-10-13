@@ -47,5 +47,5 @@ jobs:
       run: python -m pytest --doctest-modules --cov=src/hepunits --cov-report=xml
 
     - name: Test coverage with Codecov
-      if: matrix.python-version != 3.5 && matrix.python-version != 3.8"
+      if: "matrix.python-version != 3.5 && matrix.python-version != 3.8"
       uses: codecov/codecov-action@v2
