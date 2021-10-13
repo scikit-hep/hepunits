@@ -14,8 +14,13 @@
    :target: https://anaconda.org/conda-forge/hepunits
 
 .. image:: https://github.com/scikit-hep/hepunits/workflows/CI/badge.svg
-   :alt: Actions Status
+   :alt: Github Actions Status
    :target: https://github.com/scikit-hep/hepunits/actions
+
+.. image:: https://codecov.io/gh/scikit-hep/hepunits/graph/badge.svg?branch=master
+   :alt: Code Coverage
+   :target: https://codecov.io/gh/scikit-hep/hepunits?branch=master
+
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :alt: Code style: black
