@@ -13,11 +13,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
-    - uses: pre-commit/action@v2.0.2
     - name: Check manifest
-      uses: pre-commit/action@v2.0.2
+      uses: pre-commit/action@v2.0.3
       with:
-        extra_args: --hook-stage manual check-manifest
+        extra_args: --hook-stage manual
 
   checks:
     runs-on: ubuntu-latest
@@ -25,11 +24,11 @@ jobs:
       fail-fast: false
       matrix:
         python-version:
-        - 2.7
-        - 3.5
-        - 3.8
-        - 3.9
-        - "3.10-dev"
+        - "2.7"
+        - "3.5"
+        - "3.8"
+        - "3.9"
+        - "3.10"
 
     name: Check Python ${{ matrix.python-version }}
     steps:
@@ -47,5 +46,5 @@ jobs:
       run: python -m pytest --doctest-modules --cov=src/hepunits --cov-report=xml
 
     - name: Test coverage with Codecov
-      if: "matrix.python-version != 3.5 && matrix.python-version != 3.8"
+      if: matrix.python-version != '3.5' && matrix.python-version != '3.8'
       uses: codecov/codecov-action@v2
