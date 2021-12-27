@@ -6,7 +6,7 @@ repos:
   - id: black
 
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.0.1
+  rev: v4.1.0
   hooks:
   - id: debug-statements
   - id: end-of-file-fixer
@@ -33,7 +33,7 @@ repos:
     additional_dependencies: [flake8-bugbear, flake8-print]
 
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v0.920
+  rev: v0.930
   hooks:
   - id: mypy
     args: [--strict]
