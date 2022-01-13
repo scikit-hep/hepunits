@@ -5,6 +5,6 @@ include pyproject.toml
 recursive-include tests *.py
 
 # Type support
-recursive-include src py.typed
+recursive-include src py.typed *.pyi
 
 exclude .pre-commit-config.yaml codecov.yml

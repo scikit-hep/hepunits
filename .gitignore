@@ -71,3 +71,4 @@ docs/_build
 /.mypy_cache/*
 /pip-wheel-metadata/*
 /src/hepunits/version.py
+/src/hepunits/_version.py

@@ -1,15 +1,14 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 # Licensed under a 3-clause BSD style license, see LICENSE.
 """
 Tests for the hepunits.units.prefixes module.
 """
 
-from pytest import approx
-
 from math import log
 
-from hepunits import mega, micro, yotta, yocto, kibi, tebi
+from pytest import approx
+
+from hepunits import kibi, mega, micro, tebi, yocto, yotta
 
 
 def test_prefixes_e6():
