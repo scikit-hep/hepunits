@@ -5,7 +5,6 @@ import pytest
 import hepunits
 
 
-
 def filter_module(item: str) -> bool:
     if item == "__version__":
         return True
@@ -16,7 +15,9 @@ def filter_module(item: str) -> bool:
     return True
 
 
-@pytest.mark.skipif(sys.version_info < (3, 7), reason="Python 3.7+ added __dir__ support")
+@pytest.mark.skipif(
+    sys.version_info < (3, 7), reason="Python 3.7+ added __dir__ support"
+)
 @pytest.mark.parametrize(
     "module",
     (
