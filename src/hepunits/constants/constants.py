@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Licensed under a 3-clause BSD style license, see LICENSE.
 """
 Physical and other handy constants
@@ -28,11 +27,36 @@ Typical use case::
 # -----------------------------------------------------------------------------
 # Import statements
 # -----------------------------------------------------------------------------
-from __future__ import absolute_import
 
 from math import pi
+from typing import List
 
-from ..units.units import m, s, eplus, mole, joule, kelvin
+from ..units.units import eplus, joule, kelvin, m, mole, s
+
+__all__ = (
+    "m",
+    "s",
+    "eplus",
+    "mole",
+    "joule",
+    "kelvin",
+    "c_light",
+    "c_light_sq",
+    "pi",
+    "two_pi",
+    "half_pi",
+    "pi_sq",
+    "eminus",
+    "e_sq",
+    "Avogadro",
+    "h_Planck",
+    "hbar_Planck",
+    "hbar",
+    "hbarc",
+    "hbarc_sq",
+    "k_Boltzmann",
+)
+
 
 # -----------------------------------------------------------------------------
 # Mathematical constants
@@ -69,3 +93,7 @@ hbarc_sq = hbarc * hbarc
 
 # Boltzmann constant (exact value, taken from PDG 2020)
 k_Boltzmann = 1.380649e-23 * joule / kelvin
+
+
+def __dir__() -> List[str]:
+    return list(__all__)

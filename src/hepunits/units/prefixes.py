@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Licensed under a 3-clause BSD style license, see LICENSE.
 """
 Common unit prefixes
@@ -15,9 +14,44 @@ There are 2 types of prefixes:
 .. [Binary_prefixes] https://en.wikipedia.org/wiki/Unit_prefix#Binary_prefixes.
 """
 
+__all__ = (
+    "atto",
+    "centi",
+    "deca",
+    "deci",
+    "exa",
+    "exbi",
+    "femto",
+    "gibi",
+    "giga",
+    "googol",
+    "hecto",
+    "kibi",
+    "kilo",
+    "mebi",
+    "mega",
+    "micro",
+    "milli",
+    "nano",
+    "pebi",
+    "peta",
+    "pico",
+    "tebi",
+    "tera",
+    "yobi",
+    "yocto",
+    "yotta",
+    "zebi",
+    "zepto",
+    "zetta",
+)
+
+
 # -----------------------------------------------------------------------------
 # SI prefixes
 # -----------------------------------------------------------------------------
+from typing import List
+
 yotta = 1.0e24
 zetta = 1.0e21
 exa = 1.0e18
@@ -55,3 +89,7 @@ yobi = 2.0 ** 80
 # Miscellaneous prefixes
 # -----------------------------------------------------------------------------
 googol = 1.0e100
+
+
+def __dir__() -> List[str]:
+    return list(__all__)

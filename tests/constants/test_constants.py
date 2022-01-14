@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 # Licensed under a 3-clause BSD style license, see LICENSE.
 """
 Tests for the hepunits.constants.constants module.
@@ -7,8 +6,8 @@ Tests for the hepunits.constants.constants module.
 
 from pytest import approx
 
-from hepunits import eV, nanometer, s, THz
 from hepunits import *
+from hepunits import THz, eV, nanometer, s
 
 
 def test_constants():

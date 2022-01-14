@@ -136,10 +136,10 @@ These simple rules are enough - exemplified in the code below:
 - Dimensioned quantities in the "data stores" abide to the HEP system of units.
 
 - All definitions of dimensioned quantities are dimensioned by multiplying by the units,
-  as in `mass_window = 500 * keV`.
+  as in ``mass_window = 500 * keV``.
 
 - All output of dimensioned quantities is converted to the required units
-  by dividing by the units, as in `energy_resolution() / GeV`.
+  by dividing by the units, as in ``energy_resolution() / GeV``.
 
 For the sake of argument, let's consider below a function returning a dimensioned quantity.
 the function below stores a dimensioned quantity defined in keV
