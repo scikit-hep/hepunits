@@ -55,7 +55,7 @@ def test_time():
 
 
 def test_frequency():
-    assert second ** -1 == approx(Hz)
+    assert second**-1 == approx(Hz)
     assert 1000 * hertz == approx(kHz)
     assert 1000000 * hertz == approx(MHz)
     assert 1000000000 * hertz == approx(GHz)
