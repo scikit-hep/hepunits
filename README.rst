@@ -11,7 +11,7 @@
 
 .. image:: https://img.shields.io/conda/vn/conda-forge/hepunits.svg
    :alt: conda-forge
-   :target: https://anaconda.org/conda-forge/hepunits
+   :target: https://github.com/conda-forge/hepunits-feedstock
 
 .. image:: https://github.com/scikit-hep/hepunits/workflows/CI/badge.svg
    :alt: Github Actions Status
