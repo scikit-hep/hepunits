@@ -34,6 +34,6 @@ ignore = [
 
 [tool.mypy]
 warn_unused_configs = true
-python_version = "3.6"
+python_version = "3.7"
 files = ["src"]
 strict = true
