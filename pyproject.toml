@@ -1,13 +1,64 @@
 [build-system]
-requires = [
-    "setuptools>=42",
-    "setuptools_scm[toml]>=3.4"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hepunits"
+description = "Units and constants in the HEP system of units"
+readme = "README.rst"
+license = "BSD-3-Clause"
+requires-python = ">=3.7"
+authors = [
+    { name = "Eduardo Rodrigues", email = "eduardo.rodrigues@cern.ch" },
 ]
-build-backend = "setuptools.build_meta"
+maintainers = [
+    { name = "Scikit-HEP", email = "scikit-hep-admins@googlegroups.com" },
+]
+keywords = [
+    "Constants",
+    "HEP",
+    "HEP system of units",
+    "Units",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+all = [
+    "pytest-cov>=2.8.0",
+    "pytest>=6",
+]
+dev = [
+    "pytest-cov>=2.8.0",
+    "pytest>=6",
+]
+test = [
+    "pytest-cov>=2.8.0",
+    "pytest>=6",
+]
+
+[project.urls]
+Homepage = "https://github.com/scikit-hep/hepunits"
 
 
-[tool.setuptools_scm]
-write_to = "src/hepunits/_version.py"
+[tool.hatch]
+version.source = "vcs"
+build.hooks.vcs.version-file = "src/hepunits/_version.py"
 
 
 [tool.isort]
@@ -18,11 +69,17 @@ profile = "black"
 minversion = "6.0"
 junit_family = "xunit2"
 testpaths = ["tests"]
-filterwarnings = ["error"]
-addopts = ["-ra", "--showlocals", "--strict-markers", "--strict-config"]
+filterwarnings = [
+    "error",
+]
+addopts = [
+    "-ra",
+    "--showlocals",
+    "--strict-markers",
+    "--strict-config",
+]
 xfail_strict = true
 log_cli_level = "DEBUG"
-
 
 [tool.check-manifest]
 ignore = [
@@ -30,7 +87,6 @@ ignore = [
     ".pre-commit-config.yaml",
     "noxfile.py",
 ]
-
 
 [tool.mypy]
 warn_unused_configs = true
