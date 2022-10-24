@@ -1,30 +1,9 @@
 ``hepunits``: units and constants in the HEP system of units
 ============================================================
 
-.. image:: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
-   :alt: Scikit-HEP project package
-   :target: https://scikit-hep.org
+|Scikit-HEP| |PyPI version| |Conda-forge version| |Zenodo DOI|
 
-.. image:: https://img.shields.io/pypi/v/hepunits.svg
-   :alt: PyPI
-   :target: https://pypi.python.org/pypi/hepunits
-
-.. image:: https://img.shields.io/conda/vn/conda-forge/hepunits.svg
-   :alt: conda-forge
-   :target: https://github.com/conda-forge/hepunits-feedstock
-
-.. image:: https://github.com/scikit-hep/hepunits/workflows/CI/badge.svg
-   :alt: Github Actions Status
-   :target: https://github.com/scikit-hep/hepunits/actions
-
-.. image:: https://codecov.io/gh/scikit-hep/hepunits/graph/badge.svg?branch=master
-   :alt: Code Coverage
-   :target: https://codecov.io/gh/scikit-hep/hepunits?branch=master
-
-
-.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
-   :alt: Code style: black
-   :target: https://github.com/psf/black
+|GitHub Actions Status: CI| |Code Coverage| |Code style: black|
 
 
 ``hepunits`` collects the most commonly used units and constants in the
@@ -156,3 +135,26 @@ to ensure an explicit conversion to the desired unit dividing by it (GeV in the 
     ...
     >>> energy_resolution() / GeV # get the energy resolution in GeV
     0.0005
+
+
+
+.. |Scikit-HEP| image:: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
+   :target: https://scikit-hep.org
+
+.. |PyPI version| image:: https://img.shields.io/pypi/v/hepunits.svg
+   :target: https://pypi.org/project/hepunits/
+
+.. |Conda-forge version| image:: https://img.shields.io/conda/vn/conda-forge/hepunits.svg
+   :target: https://github.com/conda-forge/hepunits-feedstock
+
+.. |Zenodo DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7244906.svg
+   :target: https://doi.org/10.5281/zenodo.7244906
+
+.. |GitHub Actions Status: CI| image:: https://github.com/scikit-hep/hepunits/workflows/CI/badge.svg
+   :target: https://github.com/scikit-hep/hepunits/actions
+
+.. |Code Coverage| image:: https://codecov.io/gh/scikit-hep/hepunits/graph/badge.svg?branch=master
+   :target: https://codecov.io/gh/scikit-hep/hepunits?branch=master
+
+.. |Code style: black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/psf/black
