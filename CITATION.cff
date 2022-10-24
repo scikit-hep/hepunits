@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: hepunits
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+abstract: "Hepunits is a Python library for units and constants in the HEP system of units."
+authors:
+  - family-names: Rodrigues
+    given-names: Eduardo
+    affiliation: University of Liverpool
+    orcid: "https://orcid.org/0000-0003-2846-7625"
+doi: 10.5281/zenodo.7244906
+repository-code: "https://github.com/scikit-hep/hepunits"
+keywords:
+  - python
+  - HEP units
+  - scikit-hep
+license: "BSD-3-Clause"
