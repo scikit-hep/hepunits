@@ -81,7 +81,7 @@ physical constants and commonly used constants.
 
 The typical usage is the following:
 
-.. code-block:: python
+.. code-block:: pycon
 
     >>> from hepunits.constants import c_light
     >>> from hepunits.units     import picosecond, micrometer
@@ -94,7 +94,7 @@ The typical usage is the following:
 
 Typical usage of the ``hepunits.units`` module:
 
-.. code-block:: python
+.. code-block:: pycon
 
     >>> # add two quantities with length units and get the result in meters
     >>> from hepunits import units as u
@@ -125,7 +125,7 @@ the function below stores a dimensioned quantity defined in keV
 (the actual value is represented in MeV, which is the standard unit) and the caller simply needs
 to ensure an explicit conversion to the desired unit dividing by it (GeV in the example):
 
-.. code-block:: python
+.. code-block:: pycon
 
     >>> from hepunits.units import keV, MeV, GeV
     >>> mass_window = 1 * GeV    # define a 1 GeV mass window
