@@ -70,7 +70,7 @@ pi_sq = pi * pi
 # Physical constants
 # -----------------------------------------------------------------------------
 
-# Speed of light in vacuum (exact value, taken from PDG 2020)
+# Speed of light in vacuum (exact value, taken from PDG 2022)
 c_light = 299792458 * m / s
 c_light_sq = c_light * c_light
 
@@ -78,10 +78,10 @@ c_light_sq = c_light * c_light
 eminus = -eplus  # electron charge
 e_sq = eplus * eplus
 
-# Avogadro constant (exact value, taken from PDG 2020)
+# Avogadro constant (exact value, taken from PDG 2022)
 Avogadro = 6.02214076e23 / mole
 
-# Planck constant (exact value, taken from PDG 2020)
+# Planck constant (exact value, taken from PDG 2022)
 h_Planck = 6.62607015e-34 * joule * s
 
 hbar_Planck = h_Planck / two_pi
@@ -91,7 +91,7 @@ hbarc = hbar_Planck * c_light
 
 hbarc_sq = hbarc * hbarc
 
-# Boltzmann constant (exact value, taken from PDG 2020)
+# Boltzmann constant (exact value, taken from PDG 2022)
 k_Boltzmann = 1.380649e-23 * joule / kelvin
 
 

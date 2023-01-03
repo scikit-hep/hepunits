@@ -258,7 +258,7 @@ deg = degree
 # --------------------------------------------------------------------
 
 # Positron charge [Coulomb]
-e_SI = 1.602176634e-19  # exact value, taken from PDG 2020
+e_SI = 1.602176634e-19  # exact value, taken from PDG 2022
 
 
 # Electric charge [Q]
