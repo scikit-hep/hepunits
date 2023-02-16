@@ -1,5 +1,0 @@
-[flake8]
-extend-ignore = B950, E501
-extend-select = B9
-per-file-ignores =
-    tests/*: T, F405, F403

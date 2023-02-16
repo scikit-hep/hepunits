@@ -20,14 +20,14 @@ def filter_module(item: str) -> bool:
 )
 @pytest.mark.parametrize(
     "module",
-    (
+    [
         hepunits,
         hepunits.units,
         hepunits.constants,
         hepunits.constants.constants,
         hepunits.units.prefixes,
         hepunits.units.units,
-    ),
+    ],
 )
 def test_missing_all(module):
     assert set(dir(module)) == set(module.__all__)
