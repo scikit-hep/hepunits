@@ -116,7 +116,6 @@ ignore = [
     "PT013",  # Okay to import approx from pytest
     "PLR",    # Design related pylint codes
 ]
-target-version = "py37"
 src = ["src"]
 
 [tool.ruff.per-file-ignores]
