@@ -6,7 +6,6 @@ build-backend = "hatchling.build"
 name = "hepunits"
 description = "Units and constants in the HEP system of units"
 readme = "README.rst"
-license = "BSD-3-Clause"
 requires-python = ">=3.7"
 authors = [
     { name = "Eduardo Rodrigues", email = "eduardo.rodrigues@cern.ch" },
