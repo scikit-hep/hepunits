@@ -3,7 +3,7 @@
 
 |Scikit-HEP| |PyPI version| |Conda-forge version| |Zenodo DOI|
 
-|GitHub Actions Status: CI| |Code Coverage| |Code style: black|
+|GitHub Actions Status: CI| |Code Coverage|
 
 
 ``hepunits`` collects the most commonly used units and constants in the
@@ -155,6 +155,3 @@ to ensure an explicit conversion to the desired unit dividing by it (GeV in the 
 
 .. |Code Coverage| image:: https://codecov.io/gh/scikit-hep/hepunits/graph/badge.svg?branch=master
    :target: https://codecov.io/gh/scikit-hep/hepunits?branch=master
-
-.. |Code style: black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
-   :target: https://github.com/psf/black
