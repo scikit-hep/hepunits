@@ -66,7 +66,6 @@ Typical use cases::
 .. [SI] http://www.physics.nist.gov/cuu/Units/index.html.
 """
 
-
 from math import pi as _pi
 from typing import List
 
