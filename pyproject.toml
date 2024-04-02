@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "hepunits"
 description = "Units and constants in the HEP system of units"
 readme = "README.rst"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 authors = [
     { name = "Eduardo Rodrigues", email = "eduardo.rodrigues@cern.ch" },
 ]
@@ -28,11 +28,11 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering",
 ]
 dynamic = ["version"]
@@ -85,7 +85,7 @@ ignore = [
 
 [tool.mypy]
 warn_unused_configs = true
-python_version = "3.7"
+python_version = "3.8"
 files = ["src"]
 strict = true
 warn_unreachable = true
@@ -115,6 +115,9 @@ extend-select = [
     "T20",         # flake8-print
     "UP",          # pyupgrade
     "YTT",         # flake8-2020
+]
+ignore = [
+  "ISC001",
 ]
 
 [tool.ruff.lint.per-file-ignores]

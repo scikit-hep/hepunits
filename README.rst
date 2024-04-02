@@ -81,20 +81,20 @@ physical constants and commonly used constants.
 
 The typical usage is the following:
 
-.. code-block:: python
+.. code-block:: pycon
 
     >>> from hepunits.constants import c_light
-    >>> from hepunits.units     import picosecond, micrometer
-    >>> tau_Bs = 1.5 * picosecond    # a particle lifetime, say the Bs meson's
-    >>> ctau_Bs = c_light * tau_Bs   # ctau of the particle, ~450 microns
-    >>> print ctau_Bs                # result in HEP units, so mm
+    >>> from hepunits.units import picosecond, micrometer
+    >>> tau_Bs = 1.5 * picosecond  # a particle lifetime, say the Bs meson's
+    >>> ctau_Bs = c_light * tau_Bs  # ctau of the particle, ~450 microns
+    >>> print(ctau_Bs)  # result in HEP units, so mm
     0.449688687
-    >>> print ctau_Bs / micrometer   # result in micrometers
+    >>> print(ctau_Bs / micrometer)  # result in micrometers
     449.688687
 
 Typical usage of the ``hepunits.units`` module:
 
-.. code-block:: python
+.. code-block:: pycon
 
     >>> # add two quantities with length units and get the result in meters
     >>> from hepunits import units as u
@@ -125,15 +125,15 @@ the function below stores a dimensioned quantity defined in keV
 (the actual value is represented in MeV, which is the standard unit) and the caller simply needs
 to ensure an explicit conversion to the desired unit dividing by it (GeV in the example):
 
-.. code-block:: python
+.. code-block:: pycon
 
     >>> from hepunits.units import keV, MeV, GeV
-    >>> mass_window = 1 * GeV    # define a 1 GeV mass window
+    >>> mass_window = 1 * GeV  # define a 1 GeV mass window
     >>> def energy_resolution():
-    ...    # returns the energy resolution of 500 keV
-    ...    return 500. * keV  # numerical value is 0.5
+    ...     # returns the energy resolution of 500 keV
+    ...     return 500.0 * keV  # numerical value is 0.5
     ...
-    >>> energy_resolution() / GeV # get the energy resolution in GeV
+    >>> energy_resolution() / GeV  # get the energy resolution in GeV
     0.0005
 
 
