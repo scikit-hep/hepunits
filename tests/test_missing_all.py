@@ -8,9 +8,7 @@ def filter_module(item: str) -> bool:
         return True
     if item.startswith("_"):
         return False
-    if item in {"List"}:
-        return False
-    return True
+    return item not in {"List"}
 
 
 @pytest.mark.parametrize(
