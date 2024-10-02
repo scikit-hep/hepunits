@@ -20,8 +20,6 @@ jobs:
           python-version: "3.x"
       - name: Check manifest
         uses: pre-commit/action@v3.0.1
-        with:
-          extra_args: --hook-stage manual
 
   checks:
     runs-on: ubuntu-latest
@@ -34,15 +32,18 @@ jobs:
           - "3.10"
           - "3.11"
           - "3.12"
+          - "3.13"
 
     name: Check Python ${{ matrix.python-version }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: ${{ matrix.python-version }}
+          allow-prereleases: true
 
       - name: Install package
         run: python -m pip install -e .[test]
