@@ -44,8 +44,10 @@ jobs:
         with:
           python-version: "3.x"
 
+      - uses: astral-sh/setup-uv@v3
+
       - name: Install package
-        run: python -m pip install -e .[test]
+        run: uv pip install --system -e .[test]
 
       - name: Test package
         run: python -m pytest --doctest-modules --cov=src/hepunits --cov-report=xml
