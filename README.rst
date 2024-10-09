@@ -153,5 +153,5 @@ to ensure an explicit conversion to the desired unit dividing by it (GeV in the 
 .. |GitHub Actions Status: CI| image:: https://github.com/scikit-hep/hepunits/workflows/CI/badge.svg
    :target: https://github.com/scikit-hep/hepunits/actions
 
-.. |Code Coverage| image:: https://codecov.io/gh/scikit-hep/hepunits/graph/badge.svg?branch=master
-   :target: https://codecov.io/gh/scikit-hep/hepunits?branch=master
+.. |Code Coverage| image:: https://codecov.io/gh/scikit-hep/hepunits/graph/badge.svg?branch=main
+   :target: https://codecov.io/gh/scikit-hep/hepunits?branch=main
