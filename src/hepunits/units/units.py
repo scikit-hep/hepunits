@@ -405,13 +405,14 @@ sievert = joule / kilogram
 Sv = sievert
 
 __all__ = (
+    "GW",
+    "MW",
     "A",
     "Bq",
     "Ci",
     "EeV",
     "GBq",
     "GHz",
-    "GW",
     "GeV",
     "Gy",
     "Hz",
@@ -419,7 +420,6 @@ __all__ = (
     "MBq",
     "MGy",
     "MHz",
-    "MW",
     "MeV",
     "N",
     "Pa",
