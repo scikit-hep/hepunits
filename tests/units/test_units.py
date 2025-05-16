@@ -85,3 +85,8 @@ def test_electricity():
 def test_radiation_units():
     assert gray == sievert  # equal in terms of value
     assert 1 * curie == 37 * giga * becquerel
+
+
+def test_magnetic_flux():
+    assert weber == tesla * meter2
+    assert weber == ohm * coulomb

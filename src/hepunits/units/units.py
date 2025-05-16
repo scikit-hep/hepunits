@@ -108,7 +108,9 @@ km3 = kilometer3
 
 micrometer = _pre.micro * meter
 micron = micrometer
+
 nanometer = _pre.nano * meter
+
 angstrom = 1e-10 * meter
 
 femtometer = _pre.femto * meter
@@ -221,6 +223,8 @@ eplus = 1.0  # positron charge
 # Units of temperature
 # --------------------------------------------------------------------
 kelvin = 1.0
+
+K = kelvin
 
 # --------------------------------------------------------------------
 # Units of amount of substance
@@ -342,8 +346,20 @@ kilogauss = _pre.kilo * gauss
 # Magnetic Flux
 weber = volt * second  # weber = 1000*megavolt*ns
 
+milliweber = _pre.milli * weber
+microweber = _pre.micro * weber
+nanoweber = _pre.nano * weber
+
+Wb = weber
+
+mWb = milliweber
+uWb = microweber
+nWb = nanoweber
+
 # Inductance
 henry = weber / ampere
+
+H = henry
 
 # --------------------------------------------------------------------
 # Units derived from luminous intensity
