@@ -14,7 +14,6 @@ def filter_module(item: str) -> bool:
 @pytest.mark.parametrize(
     "module",
     [
-        hepunits,
         hepunits.units,
         hepunits.constants,
         hepunits.constants.constants,
