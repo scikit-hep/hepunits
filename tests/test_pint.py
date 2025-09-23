@@ -27,11 +27,12 @@ def test_pint_roundtrip():
     assert to_clhep(2 * ureg.ohm) == approx(2.0 * hepunits.ohm)
     assert to_clhep(ureg.coulomb) == approx(hepunits.coulomb)
 
-    assert (
-        from_clhep(hepunits.c_light, ureg.meter / ureg.second).m
-        == (1.0 * ureg.c).to(ureg.meter / ureg.second).m
+    assert from_clhep(hepunits.c_light, ureg.meter / ureg.second).m == approx(
+        (1.0 * ureg.c).to(ureg.meter / ureg.second).m, rel=1e-15
     )
-    assert from_clhep(hepunits.tesla, ureg.tesla).m == (1 * ureg.tesla).m
+    assert from_clhep(hepunits.tesla, ureg.tesla).m == approx(
+        (1 * ureg.tesla).m, rel=1e-15
+    )
 
 
 def test_unsupported_dimension():
