@@ -73,4 +73,4 @@ def from_clhep(val: float, unit: pint.Unit) -> pint.Quantity:
         The value in the desired unit
     """
     clhep_unit = _unit_from(unit)
-    return (val * clhep_unit).to(unit)
+    return pint.Quantity(val, clhep_unit).to(unit)
