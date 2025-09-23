@@ -1,5 +1,6 @@
 import pint
 from pytest import approx
+import pytest
 
 import hepunits
 from hepunits.pint import from_clhep, to_clhep
@@ -24,9 +25,15 @@ def test_pint_roundtrip():
     assert to_clhep(3 * ureg.mm) == approx(3.0)
     assert to_clhep(3 * ureg.cm) == approx(30.0)
     assert to_clhep(2 * ureg.ohm) == approx(2.0 * hepunits.ohm)
+    assert to_clhep(ureg.coulomb) == approx(hepunits.coulomb)
 
     assert (
         from_clhep(hepunits.c_light, ureg.meter / ureg.second).m
         == (1.0 * ureg.c).to(ureg.meter / ureg.second).m
     )
     assert from_clhep(hepunits.tesla, ureg.tesla).m == (1 * ureg.tesla).m
+
+def test_unsupported_dimension():
+    ureg = pint.UnitRegistry()
+    with pytest.raises(ValueError, match="Unsupported dimension"):
+        to_clhep(1 * ureg.kelvin)
