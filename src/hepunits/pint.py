@@ -53,10 +53,8 @@ def to_clhep(val: pint.Quantity | pint.Unit) -> float:
         The value in CLHEP base units (dimensionless)
     """
     clhep_unit = _unit_from(val)
-    if isinstance(val, pint.Unit):
-        val = 1.0 * val
-
-    return val.to(clhep_unit).magnitude
+    q = pint.Quantity(1.0, val) if isinstance(val, pint.Unit) else val
+    return q.to(clhep_unit).magnitude  # type: ignore[no-any-return]
 
 
 def from_clhep(val: float, unit: pint.Unit) -> pint.Quantity:
