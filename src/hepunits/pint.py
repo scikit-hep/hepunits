@@ -6,6 +6,7 @@ the dimensionality of the unit, which is helpful in deducing and/or validating
 the resulting unit of formulas. This module offers conversion routines between
 Pint's default base unit system and CLHEP.
 """
+from __future__ import annotations
 
 try:
     import pint
