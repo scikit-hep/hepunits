@@ -1,6 +1,6 @@
 import pint
-from pytest import approx
 import pytest
+from pytest import approx
 
 import hepunits
 from hepunits.pint import from_clhep, to_clhep
@@ -32,6 +32,7 @@ def test_pint_roundtrip():
         == (1.0 * ureg.c).to(ureg.meter / ureg.second).m
     )
     assert from_clhep(hepunits.tesla, ureg.tesla).m == (1 * ureg.tesla).m
+
 
 def test_unsupported_dimension():
     ureg = pint.UnitRegistry()
