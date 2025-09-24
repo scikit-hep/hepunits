@@ -1,3 +1,8 @@
+#!/usr/bin/env python
+# Licensed under a 3-clause BSD style license, see LICENSE.
+"""
+Tests for the hepunits.pint module.
+"""
 import pint
 import pytest
 from pytest import approx
