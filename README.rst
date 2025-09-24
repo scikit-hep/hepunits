@@ -71,7 +71,7 @@ The package is also available on `conda-forge`_, and installable with
 Getting started
 ---------------
 
-The package contains 2 modules, ``constants`` and ``units``,
+The package contains 2 core modules, ``constants`` and ``units``,
 whose names are self-explanatory.
 It may be more readable to import quantities explicitly from each of the modules
 though everything is available from the top-level as ``from hepunits import ...``.
@@ -137,6 +137,30 @@ to ensure an explicit conversion to the desired unit dividing by it (GeV in the 
     0.0005
 
 
+Pint integration
+~~~~~~~~~~~~~~~~
+The package can interoperate with `Pint`_, which provides a more full-featured units
+and quantities system. Pint is an optional dependency of ``hepunits``.
+When Pint is installed, ``hepunits`` units and constants can be used to create Pint
+quantities, and Pint quantities can be converted to ``hepunits`` units, as shown below.
+
+.. code-block:: pycon
+
+    >>> import pint
+    >>> import hepunits
+    >>> from hepunits.pint import to_clhep, from_clhep
+    >>> ureg = pint.UnitRegistry()
+    >>> g = 9.8 * ureg.meter / ureg.second**2
+    >>> g
+    <Quantity(9.8, 'meter / second ** 2')>
+    >>> to_clhep(g)
+    9.800000000000001e-15
+    >>> from_clhep(hepunits.c_light, ureg.meter / ureg.second)
+    <Quantity(299792458.0, 'meter / second')>
+    >>> from_clhep(hepunits.c_light, ureg.fathom / ureg.fortnight)
+    <Quantity(1.98287528e+14, 'fathom / fortnight')>
+
+.. _Pint: https://pint.readthedocs.io/
 
 .. |Scikit-HEP| image:: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
    :target: https://scikit-hep.org

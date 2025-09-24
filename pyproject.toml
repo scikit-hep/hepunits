@@ -42,14 +42,17 @@ dynamic = ["version"]
 all = [
     "pytest-cov>=2.8.0",
     "pytest>=6",
+    "pint",
 ]
 dev = [
     "pytest-cov>=2.8.0",
     "pytest>=6",
+    "pint",
 ]
 test = [
     "pytest-cov>=2.8.0",
     "pytest>=6",
+    "pint",
 ]
 
 [project.urls]
