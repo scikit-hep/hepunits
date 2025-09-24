@@ -54,6 +54,15 @@ def to_clhep(val: pint.Quantity | pint.Unit) -> float:
     -------
     float
         The value in CLHEP base units (dimensionless).
+
+    Examples
+    --------
+    >>> ureg = pint.UnitRegistry()
+    >>> g = 9.8 * ureg.meter / ureg.second**2
+    >>> g
+    <Quantity(9.8, 'meter / second ** 2')>
+    >>> to_clhep(g)
+    9.800000000000001e-15
     """
     clhep_unit = _unit_from(val)
     q = pint.Quantity(1.0, val) if isinstance(val, pint.Unit) else val
@@ -75,6 +84,12 @@ def from_clhep(val: float, unit: pint.Unit) -> pint.Quantity:
     -------
     pint.Quantity
         The value in the desired unit.
+
+    Examples
+    --------
+    >>> ureg = pint.UnitRegistry()
+    >>> from_clhep(hepunits.c_light, ureg.meter / ureg.second)
+    <Quantity(299792458.0, 'meter / second')>
     """
     clhep_unit = _unit_from(unit)
     return pint.Quantity(val, clhep_unit).to(unit)
