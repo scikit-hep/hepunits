@@ -3,6 +3,7 @@
 """
 Tests for the hepunits.pint module.
 """
+
 import pint
 import pytest
 from pytest import approx
