@@ -314,11 +314,18 @@ atmosphere = 101325 * pascal
 # Mass [E][T^2][L^-2]
 kilogram = joule * second * second / (meter * meter)
 gram = _pre.milli * kilogram
-milligram = _pre.milli * gram
 
+quettagram = _pre.quetta * gram
+ronnagram = _pre.ronna * gram
+milligram = _pre.milli * gram
+rontogram = _pre.ronto * gram
+
+Qg = quettagram
+Rg = ronnagram
 kg = kilogram
 g = gram
 mg = milligram
+rg = rontogram
 
 # Electric potential
 megavolt = megaelectronvolt / eplus
@@ -442,6 +449,8 @@ __all__ = (
     "N",
     "Pa",
     "PeV",
+    "Qg",
+    "Rg",
     "Sv",
     "THz",
     "TeV",
@@ -593,8 +602,12 @@ __all__ = (
     "picofarad",
     "picosecond",
     "ps",
+    "quettagram",
     "rad",
     "radian",
+    "ronnagram",
+    "rontogram",
+    "rg",
     "s",
     "second",
     "sievert",
