@@ -45,3 +45,12 @@ def test_unsupported_dimension():
     ureg = pint.UnitRegistry()
     with pytest.raises(ValueError, match="Unsupported dimension"):
         to_clhep(1 * ureg.kelvin)
+
+
+def test_consistent_registry():
+    ureg = pint.UnitRegistry()
+
+    a = 1 * hepunits.mm
+    b = 3 * ureg.nanosecond
+    assert a * to_clhep(b) == 3 * hepunits.mm * hepunits.nanosecond
+    assert from_clhep(a, ureg.mm) * b == 3 * ureg.mm * ureg.nanosecond

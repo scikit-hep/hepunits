@@ -65,7 +65,7 @@ def to_clhep(val: pint.Quantity | pint.Unit) -> float:
     9.800000000000001e-15
     """
     clhep_unit = _unit_from(val)
-    q = pint.Quantity(1.0, val) if isinstance(val, pint.Unit) else val
+    q = (1.0 * val) if isinstance(val, pint.Unit) else val
     return q.to(clhep_unit).magnitude  # type: ignore[no-any-return]
 
 
@@ -92,4 +92,4 @@ def from_clhep(val: float, unit: pint.Unit) -> pint.Quantity:
     <Quantity(299792458.0, 'meter / second')>
     """
     clhep_unit = _unit_from(unit)
-    return pint.Quantity(val, clhep_unit).to(unit)
+    return (val * clhep_unit).to(unit)
