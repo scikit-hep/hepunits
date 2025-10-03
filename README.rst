@@ -63,7 +63,7 @@ The package is also available on `conda-forge`_, and installable with
 
 .. code-block:: bash
 
-    conda install -c conda-forge hepunits
+    conda install conda-forge::hepunits
 
 .. _conda-forge: https://github.com/conda-forge/hepunits-feedstock
 
