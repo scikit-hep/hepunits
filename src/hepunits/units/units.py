@@ -318,7 +318,7 @@ Pa = pascal
 
 bar = 1.0e5 * pascal
 
-atmosphere = 101325. * pascal
+atmosphere = 101325.0 * pascal
 
 atm = atmosphere
 
