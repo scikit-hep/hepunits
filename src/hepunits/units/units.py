@@ -214,6 +214,10 @@ MeV = megaelectronvolt
 keV = kiloelectronvolt
 eV = electronvolt
 
+electronvolt2 = electronvolt * electronvolt
+
+eV2 = electronvolt2
+
 # --------------------------------------------------------------------
 # Units of electric charge
 # --------------------------------------------------------------------
@@ -260,16 +264,15 @@ deg = degree
 # Derived units
 # --------------------------------------------------------------------
 
-# Positron charge [Coulomb]
+# Positron charge
 e_SI = 1.602176634e-19  # exact value, taken from PDG 2022
 
 
-# Electric charge [Q]
+# Electric charge
 # --------------------------------------------------------------------
 coulomb = eplus / e_SI
 
-# Electric current [Q][T^-1]
-# -------------------------
+# Electric current
 ampere = coulomb / second
 
 milliampere = _pre.milli * ampere
@@ -277,25 +280,31 @@ microampere = _pre.micro * ampere
 nanoampere = _pre.nano * ampere
 
 A = ampere
+mA = milliampere
+uA = microampere
+nA = nanoampere
 
-# Energy [E]
-# ----------
+# Energy
 joule = electronvolt / e_SI  # joule = 6.24151e+12 * MeV
 
 J = joule
 
 erg = 1.0e-7 * joule
 
-# Power [M][L^2][T^-3]
+# Power
 watt = joule / second
+
+gigawatt = _pre.giga * watt
+megawatt = _pre.mega * watt
+kilowatt = _pre.kilo * watt
 
 W = watt
 
-kW = _pre.kilo * watt
-MW = _pre.mega * watt
-GW = _pre.giga * watt
+GW = gigawatt
+MW = megawatt
+kW = kilowatt
 
-# Force [E][L^-1]
+# Force
 newton = joule / meter
 
 N = newton
@@ -309,10 +318,12 @@ Pa = pascal
 
 bar = 1.0e5 * pascal
 
-atmosphere = 101325 * pascal
+atmosphere = 101325. * pascal
+
+atm = atmosphere
 
 # Mass [E][T^2][L^-2]
-kilogram = joule * second * second / (meter * meter)
+kilogram = joule * second * second / meter2
 gram = _pre.milli * kilogram
 
 quettagram = _pre.quetta * gram
@@ -332,6 +343,10 @@ megavolt = megaelectronvolt / eplus
 volt = _pre.micro * megavolt
 kilovolt = _pre.kilo * volt
 
+MV = megavolt
+kV = kilovolt
+V = volt
+
 # Electric capacitance
 farad = coulomb / volt
 
@@ -340,18 +355,31 @@ microfarad = _pre.micro * farad
 nanofarad = _pre.nano * farad
 picofarad = _pre.pico * farad
 
+F = farad
+mF = millifarad
+uF = microfarad
+nF = nanofarad
+pF = picofarad
+
 # Electric resistance
 ohm = volt / ampere
 
 # Magnetic Field
 tesla = volt * second / meter2
 
+T = tesla
+
 gauss = 1.0e-4 * tesla
 
 kilogauss = _pre.kilo * gauss
 
+G = gauss
+Gs = gauss
+kG = kilogauss
+kGs = kilogauss
+
 # Magnetic Flux
-weber = volt * second  # weber = 1000*megavolt*ns
+weber = volt * second
 
 milliweber = _pre.milli * weber
 microweber = _pre.micro * weber
@@ -372,17 +400,21 @@ H = henry
 # Units derived from luminous intensity
 # --------------------------------------------------------------------
 
-# Luminous flux [I]
+# Luminous flux
 lumen = candela * steradian
 
-# Illuminance, i.e. amount of luminous flux per unit area [I][L^-2]
+lm = lumen
+
+# Illuminance, i.e. amount of luminous flux per unit area
 lux = lumen / meter2
+
+lx = lux
 
 # --------------------------------------------------------------------
 # Units for radiation
 # --------------------------------------------------------------------
 
-# Activity [T^-1]
+# Activity
 becquerel = 1.0 / second
 
 kilobecquerel = _pre.kilo * becquerel
@@ -407,7 +439,7 @@ mCi = millicurie
 uCi = microcurie
 nCi = nanocurie
 
-# Absorbed dose [L^2][T^-2]
+# Absorbed dose
 gray = joule / kilogram
 
 megagray = _pre.mega * gray
