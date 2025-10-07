@@ -272,6 +272,8 @@ e_SI = 1.602176634e-19  # exact value, taken from PDG 2022
 # --------------------------------------------------------------------
 coulomb = eplus / e_SI
 
+C = coulomb
+
 # Electric current
 ampere = coulomb / second
 
@@ -280,6 +282,7 @@ microampere = _pre.micro * ampere
 nanoampere = _pre.nano * ampere
 
 A = ampere
+
 mA = milliampere
 uA = microampere
 nA = nanoampere
@@ -287,7 +290,15 @@ nA = nanoampere
 # Energy
 joule = electronvolt / e_SI  # joule = 6.24151e+12 * MeV
 
+gigajoule = _pre.giga * joule
+megajoule = _pre.mega * joule
+kilojoule = _pre.kilo * joule
+
 J = joule
+
+GJ = gigajoule
+MJ = megajoule
+kJ = kilojoule
 
 erg = 1.0e-7 * joule
 
@@ -317,6 +328,10 @@ pascal = newton / meter2
 Pa = pascal
 
 bar = 1.0e5 * pascal
+
+millibar = _pre.milli * bar
+
+mbar = millibar
 
 atmosphere = 101325.0 * pascal
 
@@ -466,6 +481,7 @@ __all__ = (
     "MW",
     "A",
     "Bq",
+    "C",
     "Ci",
     "EeV",
     "F",
