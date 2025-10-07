@@ -13,7 +13,7 @@ from __future__ import annotations
 
 try:
     import pint
-except ImportError as exc:
+except ImportError as exc:  # pragma: no cover
     msg = "Pint is required to use hepunits.pint."
     raise ImportError(msg) from exc
 

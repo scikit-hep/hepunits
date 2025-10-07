@@ -596,5 +596,5 @@ __all__ = (
 )
 
 
-def __dir__() -> List[str]:
+def __dir__() -> List[str]:  # pragma: no cover
     return list(__all__)

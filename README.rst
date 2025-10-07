@@ -177,5 +177,5 @@ quantities, and Pint quantities can be converted to ``hepunits`` units, as shown
 .. |GitHub Actions Status: CI| image:: https://github.com/scikit-hep/hepunits/workflows/CI/badge.svg
    :target: https://github.com/scikit-hep/hepunits/actions
 
-.. |Code Coverage| image:: https://codecov.io/gh/scikit-hep/hepunits/graph/badge.svg?branch=main
-   :target: https://codecov.io/gh/scikit-hep/hepunits?branch=main
+.. |Code Coverage| image:: https://codecov.io/gh/scikit-hep/hepunits/branch/main/graph/badge.svg
+   :target: https://app.codecov.io/gh/scikit-hep/hepunits/tree/main
