@@ -10,6 +10,7 @@ requires-python = ">=3.8"
 authors = [
     { name = "Eduardo Rodrigues", email = "eduardo.rodrigues@cern.ch" },
 ]
+license = "BSD-3-Clause"
 maintainers = [
     { name = "Scikit-HEP", email = "scikit-hep-admins@googlegroups.com" },
 ]
@@ -23,7 +24,6 @@ classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: BSD License",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
@@ -34,6 +34,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Scientific/Engineering",
 ]
 dynamic = ["version"]
@@ -89,7 +90,7 @@ ignore = [
 
 [tool.mypy]
 warn_unused_configs = true
-python_version = "3.8"
+python_version = "3.10"
 files = ["src"]
 strict = true
 warn_unreachable = true
