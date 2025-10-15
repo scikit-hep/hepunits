@@ -38,7 +38,7 @@ def _unit_from(val: pint.Quantity | pint.Unit) -> pint.Unit:
             raise ValueError(msg)
         out *= unit(_clhep_base_units[dim]) ** exponent
 
-    return out
+    return out  # type: ignore[return-value]
 
 
 def to_clhep(val: pint.Quantity | pint.Unit) -> float:
@@ -92,4 +92,4 @@ def from_clhep(val: float, unit: pint.Unit) -> pint.Quantity:
     <Quantity(299792458.0, 'meter / second')>
     """
     clhep_unit = _unit_from(unit)
-    return (val * clhep_unit).to(unit)
+    return (val * clhep_unit).to(unit)  # type: ignore[no-any-return]
