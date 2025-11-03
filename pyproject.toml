@@ -90,7 +90,7 @@ ignore = [
 
 [tool.mypy]
 warn_unused_configs = true
-python_version = "3.10"
+python_version = "3.13"
 files = ["src"]
 strict = true
 warn_unreachable = true
