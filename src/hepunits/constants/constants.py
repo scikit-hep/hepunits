@@ -29,7 +29,6 @@ Typical use case::
 # -----------------------------------------------------------------------------
 
 from math import pi
-from typing import List
 
 from ..units.units import e_SI, electronvolt, eplus, joule, kelvin, m, mole, s
 
@@ -100,5 +99,5 @@ hbarc_sq = hbarc * hbarc
 k_Boltzmann = 1.380649e-23 * joule / kelvin
 
 
-def __dir__() -> List[str]:
+def __dir__() -> list[str]:
     return list(__all__)

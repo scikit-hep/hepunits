@@ -67,7 +67,6 @@ Typical use cases::
 """
 
 from math import pi as _pi
-from typing import List
 
 from . import prefixes as _pre
 
@@ -715,5 +714,5 @@ __all__ = (
 )
 
 
-def __dir__() -> List[str]:
+def __dir__() -> list[str]:
     return list(__all__)
