@@ -30,7 +30,7 @@ repos:
       - id: mypy
         files: src
         args: []
-        additional_dependencies: [pint<0.25.1]  # upper limit given issue reported with 0.25.1, see https://github.com/hgrecco/pint/issues/2245
+        additional_dependencies: [pint<0.25.1] # upper limit given issue reported with 0.25.1, see https://github.com/hgrecco/pint/issues/2245
 
   - repo: https://github.com/codespell-project/codespell
     rev: v2.4.1
