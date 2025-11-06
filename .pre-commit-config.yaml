@@ -18,7 +18,7 @@ repos:
       - id: check-yaml
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.14.2"
+    rev: "v0.14.3"
     hooks:
       - id: ruff-check
         args: ["--fix", "--show-fixes"]
@@ -30,7 +30,7 @@ repos:
       - id: mypy
         files: src
         args: []
-        additional_dependencies: [pint]
+        additional_dependencies: [pint<0.25.1] # upper limit given issue reported with 0.25.1, see https://github.com/hgrecco/pint/issues/2245
 
   - repo: https://github.com/codespell-project/codespell
     rev: v2.4.1
