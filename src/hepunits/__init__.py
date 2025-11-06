@@ -1,8 +1,5 @@
 # Licensed under a 3-clause BSD style license, see LICENSE.
 
-# Convenient access to the version number
-from typing import List
-
 from . import constants, units
 from ._version import version as __version__
 from .constants.constants import (
@@ -596,5 +593,5 @@ __all__ = (
 )
 
 
-def __dir__() -> List[str]:  # pragma: no cover
+def __dir__() -> list[str]:  # pragma: no cover
     return list(__all__)

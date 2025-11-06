@@ -1,7 +1,5 @@
 # Licensed under a 3-clause BSD style license, see LICENSE.
 
-from typing import List
-
 from . import prefixes, units
 from .prefixes import (
     atto,
@@ -552,5 +550,5 @@ __all__ = (
 )
 
 
-def __dir__() -> List[str]:
+def __dir__() -> list[str]:
     return list(__all__)

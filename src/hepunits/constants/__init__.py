@@ -1,7 +1,5 @@
 # Licensed under a 3-clause BSD style license, see LICENSE.
 
-from typing import List
-
 from . import constants
 from .constants import (
     Avogadro,
@@ -57,5 +55,5 @@ __all__ = (
 )
 
 
-def __dir__() -> List[str]:
+def __dir__() -> list[str]:
     return list(__all__)
