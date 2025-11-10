@@ -78,7 +78,7 @@ addopts = [
     "--strict-config",
 ]
 xfail_strict = true
-log_cli_level = "DEBUG"
+log_level = "DEBUG"
 
 [tool.check-manifest]
 ignore = [
