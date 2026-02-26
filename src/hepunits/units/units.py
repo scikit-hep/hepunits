@@ -378,6 +378,11 @@ pF = picofarad
 # Electric resistance
 ohm = volt / ampere
 
+# Electric conductance
+siemens = 1. / ohm
+
+S = siemens
+
 # Magnetic Field
 tesla = volt * second / meter2
 
@@ -404,6 +409,10 @@ Wb = weber
 mWb = milliweber
 uWb = microweber
 nWb = nanoweber
+
+maxwell = 1.e-8 * weber
+
+Mx = maxwell
 
 # Inductance
 henry = weber / ampere
