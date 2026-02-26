@@ -90,3 +90,4 @@ def test_radiation_units():
 def test_magnetic_flux():
     assert weber == tesla * meter2
     assert weber == ohm * coulomb
+    assert maxwell == gauss * centimeter**2

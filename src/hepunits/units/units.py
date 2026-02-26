@@ -378,6 +378,11 @@ pF = picofarad
 # Electric resistance
 ohm = volt / ampere
 
+# Electric conductance
+siemens = 1.0 / ohm
+
+S = siemens
+
 # Magnetic Field
 tesla = volt * second / meter2
 
@@ -404,6 +409,10 @@ Wb = weber
 mWb = milliweber
 uWb = microweber
 nWb = nanoweber
+
+maxwell = 1.0e-8 * weber
+
+Mx = maxwell
 
 # Inductance
 henry = weber / ampere
@@ -500,11 +509,13 @@ __all__ = (
     "MGy",
     "MHz",
     "MeV",
+    "Mx",
     "N",
     "Pa",
     "PeV",
     "Qg",
     "Rg",
+    "S",
     "Sv",
     "T",
     "THz",
@@ -614,6 +625,7 @@ __all__ = (
     "mF",
     "mGy",
     "mWb",
+    "maxwell",
     "mb",
     "mbar",
     "megabecquerel",
@@ -688,6 +700,7 @@ __all__ = (
     "rontogram",
     "s",
     "second",
+    "siemens",
     "sievert",
     "sr",
     "steradian",
