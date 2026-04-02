@@ -53,6 +53,6 @@ jobs:
         run: python -m pytest --doctest-modules --cov=src/hepunits --cov-report=xml
 
       - name: Test coverage with Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v6
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
