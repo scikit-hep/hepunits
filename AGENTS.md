@@ -19,7 +19,7 @@ warning fails the suite. Pint is an optional test dependency pinned `<0.25.1`.
 ## Architecture
 
 `hepunits` defines units and constants in the **HEP System of Units** (the CLHEP
-convention used by GEANT4/Gaudi), *not* SI. The base units are: length=mm, time=ns,
+convention used by GEANT4/Gaudi), _not_ SI. The base units are: length=mm, time=ns,
 energy=MeV, charge=eplus. Everything else is derived as a plain `float` relative to
 these bases — there is no quantity/dimension type. A "value with units" is just a
 number; you attach units by multiplying (`500 * keV`) and read them back by dividing
