@@ -17,9 +17,9 @@ Typical use case::
     >>> from hepunits.units     import picosecond, micrometer
     >>> tau_Bs = 1.5 * picosecond    # a particle lifetime, say the Bs meson's
     >>> ctau_Bs = c_light * tau_Bs   # ctau of the particle, ~450 microns
-    >>> print ctau_Bs                # result in HEP units, so mm ;-)
+    >>> print(ctau_Bs)               # result in HEP units, so mm ;-)
     0.449688687
-    >>> print ctau_Bs / micrometer   # result in micrometers
+    >>> print(ctau_Bs / micrometer)  # result in micrometers
     449.688687
 
 """
