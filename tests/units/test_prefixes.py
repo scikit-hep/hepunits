@@ -1,10 +1,9 @@
-#!/usr/bin/env python
 # Licensed under a 3-clause BSD style license, see LICENSE.
 """
 Tests for the hepunits.units.prefixes module.
 """
 
-from math import log
+from math import log2
 
 from pytest import approx
 
@@ -20,5 +19,5 @@ def test_prefixes_e24():
 
 
 def test_prefixes_binary():
-    assert log(kibi, 2) == 10
-    assert log(tebi, 2) == 40
+    assert log2(kibi) == 10
+    assert log2(tebi) == 40
