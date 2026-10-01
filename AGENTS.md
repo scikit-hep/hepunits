@@ -62,7 +62,7 @@ matching import lists) in every module up the chain** — the defining module, i
 
 ## Conventions
 
-- Python 3.9+; mypy runs in `strict` mode over `src` (targeting 3.13). Keep things typed.
+- Python 3.10+; mypy runs in `strict` mode over `src` (targeting 3.13). Keep things typed.
 - Ruff enforces a broad rule set including no `print` (`T20`) and `pathlib` over `os.path`.
 - Version is derived from VCS tags via `hatch-vcs` into `src/hepunits/_version.py` (do
   not edit that file).
