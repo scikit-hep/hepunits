@@ -121,11 +121,8 @@ extend-select = [
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = [
-    "F403",
-    "F405",
     "PLR2004", # Magic value in comparisons
     "PT013",   # Okay to import approx from pytest
-    "T20",
 ]
 
 [tool.repo-review]
