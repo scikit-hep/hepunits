@@ -35,24 +35,25 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
     "Topic :: Scientific/Engineering",
 ]
 dynamic = ["version"]
 
 [project.optional-dependencies]
 all = [
-    "pytest-cov>=2.8.0",
-    "pytest>=6",
+    "pytest-cov>=6",
+    "pytest>=7",
     "pint<0.25.1",
 ]
 dev = [
-    "pytest-cov>=2.8.0",
-    "pytest>=6",
+    "pytest-cov>=6",
+    "pytest>=7",
     "pint<0.25.1",
 ]
 test = [
-    "pytest-cov>=2.8.0",
-    "pytest>=6",
+    "pytest-cov>=6",
+    "pytest>=7",
     "pint<0.25.1",
 ]
 
@@ -66,7 +67,7 @@ build.hooks.vcs.version-file = "src/hepunits/_version.py"
 
 
 [tool.pytest.ini_options]
-minversion = "6.0"
+minversion = "7.0"
 junit_family = "xunit2"
 testpaths = ["tests"]
 filterwarnings = [
